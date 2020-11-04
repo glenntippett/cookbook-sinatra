@@ -1,5 +1,5 @@
 require 'csv'
-require_relative 'recipe'
+require_relative '../modals/recipe'
 
 class Cookbook
   def initialize(csv_file_path)

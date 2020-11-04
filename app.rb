@@ -2,15 +2,15 @@ require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'better_errors'
 require 'pry-byebug'
-require_relative 'cookbook'
-require_relative 'recipe'
+require_relative 'repositories/cookbook'
+require_relative 'modals/recipe'
 set :bind, '0.0.0.0'
 configure :development do
   use BetterErrors::Middleware
   BetterErrors.application_root = File.expand_path('..', __FILE__)
 end
 
-csv_file = File.join(__dir__, 'recipes.csv')
+csv_file = File.join(__dir__, 'data/recipes.csv')
 $cookbook = Cookbook.new(csv_file)
 
 get '/' do
