@@ -46,11 +46,46 @@
         </div>
       </div>
 
+      <!-- Ingredients -->
+      <div class="row">
+        <div class="col-lg-10">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Ingredient</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+        </div>
+
+        <!-- Measurement -->
+        <div class="col-xs-2 col-lg-2">
+          <div class="input-group mb-3">
+            <select class="custom-select" id="inputGroupSelect01">
+              <option selected>Choose...</option>
+              <option value="1">ml</option>
+              <option value="2">L</option>
+              <option value="3">Cup</option>
+              <option value="4">tsp</option>
+              <option value="4">tblspn</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Ingredient to list -->
+      <div class="row mb-2">
+        <div class="col">
+          <button type="submit" class="btn btn-outline-secondary" id="add-ingredient-btn">Add ingredient</button>
+        </div>
+      </div>
+
+      <!-- Save Recipe -->
       <div class="row">
         <div class="col">
-          <button type="submit" class="btn btn-success">Save</button>
+          <button type="submit" class="btn btn-success">Save Recipe</button>
         </div>
       </div>
     </form>
   </div>
 </div>
+
