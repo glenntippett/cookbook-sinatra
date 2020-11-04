@@ -1,31 +1,32 @@
-<form action="/recipes" method="POST">
-
-  <!-- Recipe Name -->
-  <div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-default">Recipe Name</span>
+<div class="col d-flex justify-content-center">
+  <form action="/recipes" method="POST">
+    <!-- Recipe Name -->
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Recipe Name</span>
+      </div>
+      <label for="recipe_name"></label>
+      <input id="recipe_name" name="recipe_name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
-    <label for="recipe_name"></label>
-    <input id="recipe_name" name="recipe_name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-  </div>
 
-  <!-- Description -->
-  <div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+    <!-- Description -->
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+      </div>
+      <label for="description"></label>
+      <input id="description" name="description" id="recipe_name" name="recipe_name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
-    <label for="description"></label>
-    <input id="description" name="description" id="recipe_name" name="recipe_name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-  </div>
 
-  <!-- Prep Time -->
-  <div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-default">Prep Time</span>
+    <!-- Prep Time -->
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Prep Time</span>
+      </div>
+      <label for="prep_time"></label>
+      <input id="prep_time" name="prep_time" id="description" name="description" id="recipe_name" name="recipe_name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
-    <label for="prep_time"></label>
-    <input id="prep_time" name="prep_time" id="description" name="description" id="recipe_name" name="recipe_name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-  </div>
 
-  <button type="submit" class="btn btn-success">Save</button>
-</form>
+    <button type="submit" class="btn btn-success">Save</button>
+  </form>
+</div>
