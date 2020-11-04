@@ -1,5 +1,6 @@
 <form action="/recipes" method="POST">
 
+  <!-- Recipe Name -->
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text" id="inputGroup-sizing-default">Recipe Name</span>
@@ -8,6 +9,7 @@
     <input id="recipe_name" name="recipe_name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
   </div>
 
+  <!-- Description -->
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
@@ -16,21 +18,7 @@
     <input id="description" name="description" id="recipe_name" name="recipe_name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
   </div>
 
-  <div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <label class="input-group-text" for="inputGroupSelect01">Rating</label>
-    </div>
-    <label for="rating"></label>
-    <select class="custom-select" id="inputGroupSelect01" id="rating" name="rating">>
-      <option selected>Choose...</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-      <option value="4">Four</option>
-      <option value="5">Five</option>
-    </select>
-  </div>
-
+  <!-- Prep Time -->
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text" id="inputGroup-sizing-default">Prep Time</span>
@@ -41,4 +29,3 @@
 
   <button type="submit" class="btn btn-success">Save</button>
 </form>
-

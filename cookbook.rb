@@ -9,8 +9,9 @@ class Cookbook
   end
 
   def populate_recipes
-    CSV.foreach(@csv_file_path) do |row|
-      @recipes << Recipe.new(row[0], row[1], row[2], row[3], row[4])
+    csv_options = { headers: :first_row, header_converters: :symbol }
+    CSV.foreach(@csv_file_path, csv_options) do |row|
+      @recipes << Recipe.new(row)
     end
   end
 
@@ -24,18 +25,20 @@ class Cookbook
 
   def add_recipe(recipe)
     @recipes << recipe
-    update_csv
+    save_csv
   end
 
   def remove_recipe(recipe_index)
     @recipes.delete_at(recipe_index)
-    update_csv
+    save_csv
   end
 
-  def update_csv
-    CSV.open(@csv_file_path, 'wb') do |csv|
+  def save_csv
+    csv_options = { headers: :first_row, header_converters: :symbol }
+    CSV.open(@csv_file_path, 'wb', **csv_options) do |csv|
+      csv << ['name', 'description', 'prep_time']
       @recipes.each do |recip|
-        csv << [recip.name, recip.description, recip.rating, recip.prep_time, recip.read]
+        csv << [recip.name, recip.description, recip.prep_time]
       end
     end
   end

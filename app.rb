@@ -25,11 +25,9 @@ end
 post '/recipes' do
   recipe_name = params[:recipe_name]
   recipe_description = params[:description]
-  recipe_rating = params[:rating]
   prep_time = params[:prep_time]
-
   # Create new Recipe
-  recipe = Recipe.new(recipe_name, recipe_description, recipe_rating, prep_time, false)
+  recipe = Recipe.new(name: recipe_name, description: recipe_description, prep_time: prep_time)
   # Add to Cookbook repo
   $cookbook.add_recipe(recipe)
   redirect '/'
