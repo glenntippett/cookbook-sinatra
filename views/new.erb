@@ -1,48 +1,56 @@
-<div class="col mt-2">
-  <form action="/recipes" method="POST">
-    <!-- Recipe Name -->
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-default">Recipe Name</span>
+<div class="row mt-2">
+  <div class="col">
+    <h1>New Recipe</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col mt-2">
+    <form action="/recipes" method="POST">
+      <!-- Recipe Name -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Recipe Name</span>
+            </div>
+            <label for="recipe_name"></label>
+            <input id="recipe_name" name="recipe_name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           </div>
-          <label for="recipe_name"></label>
-          <input id="recipe_name" name="recipe_name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
-    </div>
 
-    <!-- Description -->
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+      <!-- Description -->
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+            </div>
+            <label for="description"></label>
+            <textarea id="description" name="description" id="recipe_name" name="recipe_name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
           </div>
-          <label for="description"></label>
-          <textarea id="description" name="description" id="recipe_name" name="recipe_name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
         </div>
       </div>
-    </div>
 
-    <!-- Prep Time -->
-    <div class="row">
-      <div class="col-lg-3">
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-default">Prep Time</span>
+      <!-- Prep Time -->
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Prep Time</span>
+            </div>
+            <label for="prep_time"></label>
+            <input id="prep_time" name="prep_time" id="description" name="description" id="recipe_name" name="recipe_name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           </div>
-          <label for="prep_time"></label>
-          <input id="prep_time" name="prep_time" id="description" name="description" id="recipe_name" name="recipe_name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col">
-        <button type="submit" class="btn btn-success">Save</button>
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn-success">Save</button>
+        </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </div>
