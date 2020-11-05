@@ -27,9 +27,16 @@ post '/recipes' do
   recipe_name = params[:recipe_name]
   recipe_description = params[:description]
   prep_time = params[:prep_time]
-  ingredients = JSON.parse(params[:ingredients]) # => Needs to be array of ingredients, currently is a String
+  ingredients = (params[:ingredients])
+  recipe_method = params[:recipe_method]
   # Create new Recipe
-  recipe = Recipe.new(name: recipe_name, description: recipe_description, prep_time: prep_time, ingredients: ingredients)
+  recipe = Recipe.new(
+    name: recipe_name, 
+    description: recipe_description, 
+    prep_time: prep_time, 
+    ingredients: ingredients, 
+    recipe_method: recipe_method
+  )
   # Add to Cookbook repo
   $cookbook.add_recipe(recipe)
   redirect '/'

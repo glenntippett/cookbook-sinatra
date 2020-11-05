@@ -72,30 +72,48 @@
         </div>
       </div>
 
-      <!-- Add Ingredient to list -->
-        <div class="row mb-2">
-          <div class="col">
-            <button type="button" class="btn btn-outline-secondary btn-sm" id="add-ingredient-btn">Add ingredient</button>
+    <!-- Add Ingredient to list -->
+      <div class="row mb-2">
+        <div class="col">
+          <button type="button" class="btn btn-outline-secondary btn-sm" id="add-ingredient-btn">Add ingredient</button>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col">
+          <h3>Ingredients</h3>
+        </div>
+      </div>
+
+      <ul class="list-group list-group-flush" id="ingredient-list-ul">
+        <!-- li items populated here -->
+      </ul>
+
+      <div class="row mt-2">
+        <div class="col">
+          <h3>Method</h3>
+        </div>
+      </div>
+
+      <!-- Method -->
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Method</span>
+            </div>
+            <label for="recipe_method"></label>
+            <textarea id="recipe_method" name="recipe_method" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
           </div>
         </div>
-
-        <div class="row mt-2">
-          <div class="col">
-            <h3>Ingredients</h3>
-          </div>
-        </div>
-
-        <ul class="list-group list-group-flush" id="ingredient-list-ul">
-          <!-- li items populated here -->
-        </ul>
+      </div>
 
       <!-- Save Recipe -->
       <div class="row">
         <div class="col">
-          <button type="submit" class="btn btn-success mt-3">Save Recipe</button>
+          <button type="submit" class="btn btn-success mb-3">Save Recipe</button>
         </div>
       </div>
     </form>
   </div>
 </div>
-

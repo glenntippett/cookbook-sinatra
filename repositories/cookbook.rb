@@ -41,7 +41,7 @@ class Cookbook
     CSV.open(@csv_file_path, 'wb', **csv_options) do |csv|
       csv << ['name', 'description', 'prep_time', 'ingredients', 'method']
       @recipes.each do |recip|
-        csv << [recip.name, recip.description, recip.prep_time, recip.ingredients]
+        csv << [recip.name, recip.description, recip.prep_time, recip.ingredients, recip.recipe_method]
       end
     end
   end

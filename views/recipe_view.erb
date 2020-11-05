@@ -1,9 +1,24 @@
-<h1><%= @recipe.name %></h1>
-<p><%= @recipe.description %></p>
+<div class="row mt-2">
+  <div class="col">
+    <h1><%= @recipe.name %></h1>
+  </div>
+</div>
+<div class="row mt-2">
+  <div class="col">
+    <p class="lead"><%= @recipe.description %></p>
+  </div>
+</div>
 
+<div class="row mt-2">
+  <div class="col">
+    <h3>Ingredients</h3>
+  </div>
+</div>
 
 <ul class="list-group list-group-flush">
   <% @recipe.ingredients.each do |element| %>
   <li class="list-group-item"> <%= element %> </li>
   <% end %>
 </ul>
+
+<p><%= @recipe.recipe_method %></p>
