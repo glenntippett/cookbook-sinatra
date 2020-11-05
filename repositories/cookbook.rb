@@ -39,7 +39,7 @@ class Cookbook
   def save_csv
     csv_options = { headers: :first_row, header_converters: :symbol }
     CSV.open(@csv_file_path, 'wb', **csv_options) do |csv|
-      csv << ['name', 'description', 'prep_time', 'ingredients', 'method']
+      csv << ['name', 'description', 'prep_time', 'ingredients', 'recipe_method']
       @recipes.each do |recip|
         csv << [recip.name, recip.description, recip.prep_time, recip.ingredients, recip.recipe_method]
       end
