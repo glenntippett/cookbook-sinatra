@@ -1,8 +1,9 @@
 <h1><%= @recipe.name %></h1>
 <p><%= @recipe.description %></p>
 
-<ol>
+
+<ul class="list-group list-group-flush">
   <% @recipe.ingredients.each do |element| %>
   <li class="list-group-item"> <%= element %> </li>
   <% end %>
-</ol>
+</ul>
