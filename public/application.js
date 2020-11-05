@@ -12,7 +12,14 @@ const addIngredientToList = () => {
     li.appendChild(document.createTextNode(text));
     li.setAttribute("class", "list-group-item");
     ul.appendChild(li);
+    createHiddenInput(text, li)
 }
 
+const createHiddenInput = (text, li) => {
+  var input = document.createElement("input");
+  input.value = text;
+  input.setAttribute("name", "ingredients[]");
+  li.appendChild(input)
+  input.hidden = true;
+}
 document.querySelector("#add-ingredient-btn").addEventListener("click", addIngredientToList);
-
