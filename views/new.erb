@@ -53,7 +53,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-default">Ingredient</span>
             </div>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="ingredient-input">
           </div>
         </div>
 
@@ -73,16 +73,26 @@
       </div>
 
       <!-- Add Ingredient to list -->
-      <div class="row mb-2">
-        <div class="col">
-          <button type="submit" class="btn btn-outline-secondary" id="add-ingredient-btn">Add ingredient</button>
+        <div class="row mb-2">
+          <div class="col">
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="add-ingredient-btn">Add ingredient</button>
+          </div>
         </div>
-      </div>
+
+        <div class="row mt-2">
+          <div class="col">
+            <h3>Ingredients</h3>
+          </div>
+        </div>
+
+        <ol class="list-group list-group-flush" id="ingredient-list-ul">
+          <!-- li items populated here --> 
+        </ol>
 
       <!-- Save Recipe -->
       <div class="row">
         <div class="col">
-          <button type="submit" class="btn btn-success">Save Recipe</button>
+          <button type="submit" class="btn btn-success mt-3">Save Recipe</button>
         </div>
       </div>
     </form>
