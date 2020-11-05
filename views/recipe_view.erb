@@ -10,15 +10,17 @@
 </div>
 
 <div class="row mt-2">
-  <div class="col">
+  <div class="col-5">
     <h3>Ingredients</h3>
+    <ul class="list-group list-group-flush">
+      <% @recipe.ingredients.each do |element| %>
+      <li class="list-group-item"> <%= element %> </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="col-7">
+    <h3>Method</h3>
+    <p><%= @recipe.recipe_method %></p>
   </div>
 </div>
-
-<ul class="list-group list-group-flush">
-  <% @recipe.ingredients.each do |element| %>
-  <li class="list-group-item"> <%= element %> </li>
-  <% end %>
-</ul>
-
-<p><%= @recipe.recipe_method %></p>

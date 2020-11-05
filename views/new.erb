@@ -47,6 +47,13 @@
       </div>
 
       <!-- Ingredients -->
+
+      <div class="row mt-2">
+        <div class="col">
+          <h3>Ingredients</h3>
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-lg-10">
           <div class="input-group mb-3">
@@ -79,12 +86,6 @@
         </div>
       </div>
 
-      <div class="row mt-2">
-        <div class="col">
-          <h3>Ingredients</h3>
-        </div>
-      </div>
-
       <ul class="list-group list-group-flush" id="ingredient-list-ul">
         <!-- li items populated here -->
       </ul>
@@ -96,17 +97,23 @@
       </div>
 
       <!-- Method -->
-      <div class="row">
-        <div class="col-lg-8">
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="inputGroup-sizing-default">Method</span>
-            </div>
-            <label for="recipe_method"></label>
-            <textarea id="recipe_method" name="recipe_method" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
-          </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Step</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="recipe-method-input">
+      </div>
+
+      <!-- Add Method to steps -->
+      <div class="row mb-2">
+        <div class="col">
+          <button type="button" class="btn btn-outline-secondary btn-sm" id="add-method-btn">Add Method</button>
         </div>
       </div>
+
+      <ol class="list-group list-group-flush" id="method-list-ol">
+        <!-- li items populated here -->
+      </ol>
 
       <!-- Save Recipe -->
       <div class="row">

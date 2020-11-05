@@ -12,14 +12,25 @@ const addIngredientToList = () => {
     li.appendChild(document.createTextNode(text));
     li.setAttribute("class", "list-group-item");
     ul.appendChild(li);
-    createHiddenInput(text, li)
+    createHiddenInput(text, li, "ingredients[]");
 }
 
-const createHiddenInput = (text, li) => {
+const addMethodToList = () => {
+  var ol = document.getElementById("method-list-ol");
+  var li = document.createElement("li");
+  var text = document.getElementById("recipe-method-input").value;
+  li.appendChild(document.createTextNode(text));
+  ol.appendChild(li);
+  createHiddenInput(text, ol, "steps[]")
+}
+
+const createHiddenInput = (text, li, arr) => {
   var input = document.createElement("input");
   input.value = text;
-  input.setAttribute("name", "ingredients[]");
+  input.setAttribute("name", arr);
   li.appendChild(input)
   input.hidden = true;
 }
+
 document.querySelector("#add-ingredient-btn").addEventListener("click", addIngredientToList);
+document.querySelector("#add-method-btn").addEventListener("click", addMethodToList);
