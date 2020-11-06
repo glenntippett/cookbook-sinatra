@@ -27,8 +27,8 @@ post '/recipes' do
   recipe_name = params[:recipe_name]
   recipe_description = params[:description]
   prep_time = params[:prep_time]
-  ingredients = (params[:ingredients])
-  recipe_method = params[:recipe_method]
+  ingredients = params[:ingredients]
+  recipe_method = params[:steps]
   # Create new Recipe
   recipe = Recipe.new(
     name: recipe_name, 

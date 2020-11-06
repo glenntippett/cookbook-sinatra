@@ -14,6 +14,7 @@ class Cookbook
     csv_options = { headers: :first_row, header_converters: :symbol }
     CSV.foreach(@csv_file_path, csv_options) do |row|
       row[:ingredients] = JSON.parse(row[:ingredients])
+      row[:recipe_method] = JSON.parse(row[:recipe_method])
       @recipes << Recipe.new(row)
     end
   end
