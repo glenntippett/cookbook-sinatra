@@ -14,6 +14,15 @@ end
 csv_file = File.join(__dir__, 'data/recipes.csv')
 $cookbook = Cookbook.new(csv_file)
 
+get '/login' do
+  erb :login, :layout => :login
+end
+
+post '/authenticate' do
+  username = params[:username]
+  password = params[:password]
+end
+
 get '/' do
   @recipes = $cookbook.all
   erb :index
